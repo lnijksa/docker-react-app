@@ -18,10 +18,10 @@ after_install:
 deploy:
   provider: elasticbeanstalk #아키텍쳐 제공 서비스명 ex> s3, elastickbeanstalk, firebase등등
   region: "us-east-2" #현재 사용하고있는 aws 서비스 위치 물리장소 ex> ap-northeast-22
-  app: "docker-react-app2" #생성된 어플리케이션이름
-  env: "Dockerreactapp2-env" #이것도 aws에서 자동으로 생성됨 
+  app: "docker-react-app" #생성된 어플리케이션이름
+  env: "Dockerreactapp-env" #이것도 aws에서 자동으로 생성됨 
   bucket_name: "elasticbeanstalk-us-east-2-028117448186" #elasticbeanstalk을 위한 s3 버켓이름  AWS s3버킷은 자동생성됨.(왜냐면 엘라스틱빈스톡은 아키를 설정해주는 서비스이기떄문에 이런 아키들 다 디폴트로 설정해줌) 해당 정보 검색해서 복붙 s3는 일종의 파일서버
-  bucket_path: "docker-react-app2"  #app명과 동일
+  bucket_path: "docker-react-app"  #app명과 동일
   on:
     branch: master #마스터에 푸쉬될때마 배포가된다.
   access_key_id: $AWS_ACCESS_ID #IAM의 ID (소스에 비밀정보가 있으면 안되기에 아무도 안보이는곳(travis-ci의 환경변수)에 집어넣음)
