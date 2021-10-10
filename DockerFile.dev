@@ -3,5 +3,5 @@ WORKDIR /usr/src/app
 # package.json 만 먼저 카피하는이유 = 소스가 좀만 바껴도 npm인스톨이되니깐 이것만 먼저해주기
 COPY package.json ./
 RUN npm install
-#COPY ./ ./
+COPY ./ ./
 CMD ["npm", "run", "start"] 
