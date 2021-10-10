@@ -24,5 +24,5 @@ deploy:
   bucket_path: "docker-react-app"  #app명과 동일
   on:
     branch: master #마스터에 푸쉬될때마 배포가된다.
-access_key_id: $AWS_ACCESS_ID #IAM의 ID (소스에 비밀정보가 있으면 안되기에 아무도 안보이는곳(travis-ci의 환경변수)에 집어넣음)
-secret_access_key: $AWS_ACCESS_KEY  #IAM의 key (소스에 비밀정보가 있으면 안되기에 아무도 안보이는곳(travis-ci의 환경변수)에 집어넣음)
+  access_key_id: $AWS_ACCESS_ID #IAM의 ID (소스에 비밀정보가 있으면 안되기에 아무도 안보이는곳(travis-ci의 환경변수)에 집어넣음)
+  secret_access_key: $AWS_ACCESS_KEY  #IAM의 key (소스에 비밀정보가 있으면 안되기에 아무도 안보이는곳(travis-ci의 환경변수)에 집어넣음)
