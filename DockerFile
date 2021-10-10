@@ -8,5 +8,7 @@ CMD ["npm", "run" , "build"]
 
 FROM nginx 
 #nginx를 위한 베이스 이미지
+EXPOSE 80
 COPY --from=builder /usr/src/app/build /usr/share/nginx/html  
 #/usr/src/app/build << 여기에 소스파일이 올라와있는데, 여기있는 파일이 nginx가 읽을수있도록 nginx경로 설정(경로는 dockerhub 공식 nginx에 나와있음)
+ 
