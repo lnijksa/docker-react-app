@@ -6,11 +6,11 @@ services:
   - docker
 
 before_install:
-  - echo "이미지 빌드시작"
+  - echo "start creating an image with dockerfile"
   - docker build -t kwangsoo/docker-react-app -f DockerFile.dev .
 
-script:
- - docker run -e CI=true kwangsoo/docker-react-app npm run test -- --coverage
+script: 
+  - docker run -e CI=true kwangsoo/docker-react-app npm run test -- --coverage
 
- after_success:
-  - echo "테스트 성공"
+after_install: 
+  - echo "end creating an image with dockerfile"
