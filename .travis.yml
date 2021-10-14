@@ -16,6 +16,7 @@ after_install:
   - echo "이미지 생성 완료"
 
 deploy:
+  edge: true
   provider: elasticbeanstalk #아키텍쳐 제공 서비스명 ex> s3, elastickbeanstalk, firebase등등
   region: "us-east-2" #현재 사용하고있는 aws 서비스 위치 물리장소 ex> ap-northeast-22
   app: "docker-react-app" #생성된 어플리케이션이름
